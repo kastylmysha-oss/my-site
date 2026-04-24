@@ -1,0 +1,27 @@
+import { useState } from "react"; import { motion, AnimatePresence } from "framer-motion"; import { Heart, Gift, Sparkles, BookOpen } from "lucide-react";
+
+export default function EmanSite() { const [page, setPage] = useState(0);
+
+const pages = [ { title: "الواجهة الرئيسية", content: ( <div className="text-center space-y-6"> <h1 className="text-4xl font-bold">💙 إلى خالتي إيمان 💙</h1> <p className="text-lg leading-8"> هذا الموقع هدية بسيطة من شخص يحبج ويقدرج مثل أمه تماماً... <br /> خالتي إيمان، امرأة قوية، مجاهدة، عفيفة، لطيفة وخلوقة. <br /> وجودج بالحياة نعمة لا تنوصف. </p> </div> ), }, { title: "كلمات مدح", content: ( <div className="space-y-4 text-right leading-8"> <p>✨ إيمان مو مجرد اسم... هي معنى القوة والحنان بنفس الوقت.</p> <p>✨ تربيتها فرح، وطيبتها تزرع الأمان بكل قلب.</p> <p>✨ امرأة ما تنوصف إلا إنها أم ثانية بكل معنى الكلمة.</p> <p>✨ العفة والخلق عنوانها، والهيبة تمشي وياها بكل مكان.</p> </div> ), }, { title: "اقتباسات فصحى", content: ( <div className="space-y-4 text-right leading-8 italic"> <p>"وفيكِ من النقاء ما يجعل القلوب تطمئن دون كلام."</p> <p>"كأنكِ أمٌّ خُلقت من طمأنينة السماء."</p> <p>"إذا ذُكر الوفاء، كنتِ أول المعاني وأصدقها."</p> <p>"يا من زرعتِ في الحياة معنى الحنان دون ضجيج."</p> </div> ), }, { title: "رسالة حسين", content: ( <div className="text-right leading-8 space-y-4"> <p> خالتي إيمان... <br /> أني حسين، أكتب هذا الكلام من قلبي مو مجرد حروف. </p> <p> أحبج واحترمج مثل أمي، وأشوفج قدوة بكل شي. وجودج بحياة فرح يخلي كلشي أهدأ وأجمل. </p> <p> ما راح ألقى كلام يوفيج حقج، بس هذا جزء بسيط من شعوري. </p> </div> ), }, { title: "الهدايا", content: ( <div className="text-center space-y-4"> <Gift size={60} className="mx-auto text-pink-400" /> <p>💝 باقة حب واحترام لا تنتهي</p> <p>💝 دعوات بالسعادة والصحة والراحة</p> <p>💝 قلب صادق يدعي إلك دائماً</p> </div> ), }, ];
+
+return ( <div className="min-h-screen bg-gradient-to-br from-blue-900 via-black to-purple-900 text-white p-6"> <div className="max-w-3xl mx-auto"> <AnimatePresence mode="wait"> <motion.div key={page} initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }} transition={{ duration: 0.6 }} className="bg-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-xl" > <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"> <Sparkles /> {pages[page].title} </h2> {pages[page].content} </motion.div> </AnimatePresence>
+
+<div className="flex justify-between mt-6">
+      <button
+        onClick={() => setPage((p) => Math.max(p - 1, 0))}
+        className="px-4 py-2 bg-white/20 rounded-xl"
+      >
+        السابق
+      </button>
+
+      <button
+        onClick={() => setPage((p) => Math.min(p + 1, pages.length - 1))}
+        className="px-4 py-2 bg-white/20 rounded-xl"
+      >
+        التالي
+      </button>
+    </div>
+  </div>
+</div>
+
+); }
