@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>خالتي إيمان 💙</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Arial';
+    background:black;
+    color:white;
+    overflow:hidden;
+}
+
+/* الصفحات */
+.page{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:100%;
+    opacity:0;
+    transition:1s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.active{
+    left:0;
+    opacity:1;
+}
+
+h1{
+    font-size:40px;
+    color:#6ecbff;
+}
+
+p{
+    max-width:700px;
+    line-height:2;
+    font-size:18px;
+}
+
+/* زر */
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    background:#6ecbff;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* تأثير نجوم */
+.stars{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:url('https://i.imgur.com/8bKQ8Kx.png');
+    animation:move 60s linear infinite;
+    z-index:-1;
+}
+
+@keyframes move{
+    from{background-position:0 0;}
+    to{background-position:1000px 1000px;}
+}
+
+/* نص متوهج */
+.glow{
+    text-shadow:0 0 20px #6ecbff;
+}
+
+/* شخصية */
+.character{
+    font-size:20px;
+    margin-top:20px;
+    color:#ccc;
+    animation:fade 3s infinite alternate;
+}
+
+@keyframes fade{
+    from{opacity:0.3;}
+    to{opacity:1;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<!-- الصفحة 1 -->
+<div class="page active" id="page1">
+    <h1 class="glow">إلى خالتي إيمان 💙</h1>
+    <p>
+    هذا مو موقع عادي...  
+    هذا كلام من قلب شخص يشوفج أعظم من مجرد كلمة "إنسانة"  
+    هذا حسين يحب يكلج هالكلام...
+    </p>
+    <button onclick="next(2)">ابدأ</button>
+</div>
+
+<!-- الصفحة 2 -->
+<div class="page" id="page2">
+    <h1>أنتِ امرأة عظيمة</h1>
+    <p>
+    خالتي إيمان،  
+    أنتِ مو بس أم... أنتِ مدرسة كاملة من الأخلاق،  
+    رمز للعفة، والقوة، والصبر، والرحمة.  
+
+    أنا أشوف بيج إنسانة جاهدت بالحياة،  
+    ووقفت بكل قوة رغم كل التعب.  
+    </p>
+    <button onclick="next(3)">التالي</button>
+</div>
+
+<!-- الصفحة 3 -->
+<div class="page" id="page3">
+    <h1>مدح تربيتك</h1>
+    <p>
+    أعظم دليل على عظمتك... هو بنتك "فرح".  
+    لأن التربية الطيبة ما تجي من فراغ،  
+    تجي من قلب نظيف، وعقل واعي، وروح طاهرة.  
+
+    أنتِ زرعتي الخير...  
+    وطلع أجمل شي ممكن ينزرع بهالحياة.
+    </p>
+    <button onclick="next(4)">التالي</button>
+</div>
+
+<!-- الصفحة 4 -->
+<div class="page" id="page4">
+    <h1>كلام من القلب</h1>
+    <p>
+    والله أحبج مثل أمي،  
+    وأحترمج احترام كبير،  
+    وأشوفج إنسانة غالية جدًا على قلبي.  
+
+    وأتمنى من الله يوفقج بكل خطوة،  
+    ويعوضج عن كل تعب،  
+    وياخذ حقج من كل ظالم.
+    </p>
+    <button onclick="next(5)">التالي</button>
+</div>
+
+<!-- الصفحة 5 -->
+<div class="page" id="page5">
+    <h1>اقتباس فصحى</h1>
+    <p>
+    "إنَّ النساءَ إذا اجتمعنَ على الفضائلِ،  
+    كانت إحداهنَّ أُمًّا للأخلاقِ قبل أن تكونَ أُمًّا للبشر."  
+
+    وأنتِ يا خالتي،  
+    أمٌّ في الأخلاق قبل كل شيء.
+    </p>
+    <button onclick="next(6)">التالي</button>
+</div>
+
+<!-- الصفحة 6 -->
+<div class="page" id="page6">
+    <h1>غزل بالأمومة</h1>
+    <p>
+    يا منبع الحنان،  
+    يا دفء القلوب،  
+    يا نور البيوت…  
+
+    الأمومة بكِ مو صفة،  
+    بل هي فنّ لا يُتقنه إلا العظماء.
+    </p>
+    <button onclick="next(7)">التالي</button>
+</div>
+
+<!-- الصفحة 7 -->
+<div class="page" id="page7">
+    <h1>هدية 🎁</h1>
+    <p>
+    هذي هدية بسيطة من قلبي:  
+
+    دعائي إلك بكل صلاة،  
+    وسعادتي لأنك موجودة بهالحياة،  
+    وفخري أني أعرف إنسانة مثلج.
+    </p>
+    <button onclick="next(8)">المفاجأة</button>
+</div>
+
+<!-- الصفحة 8 -->
+<div class="page" id="page8">
+    <h1 class="glow">الرسالة الأخيرة</h1>
+    <p>
+    خالتي إيمان...  
+    يمكن هالموقع بسيط،  
+    بس الكلام اللي بيه صادق جدًا.  
+
+    هذا حسين يحب يكلج:  
+    أنتِ إنسانة عظيمة،  
+    وقلبك نادر،  
+    ومكانتك كبيرة بقلبي. 💙
+    </p>
+
+    <div class="character">
+        "لو أكدر أوصفك بكلمة... راح أگول: نعمة من الله"
+    </div>
+</div>
+
+<script>
+function next(num){
+    document.querySelector('.active').classList.remove('active');
+    document.getElementById('page'+num).classList.add('active');
+}
+</script>
+
+</body>
+</html>
